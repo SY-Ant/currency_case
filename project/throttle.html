@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button id="btn">按钮</button>
+
+    <script>
+        /**函数的去抖动**/
+        // 函数去抖是在我们事件结束后的一段时间内才会执行，会有一个延迟性
+        function debounce(method, delay) {
+            var timer = null;
+            return function () {
+                var context = this, args = arguments;
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    method.apply(context, args);
+                }, delay);
+            }
+        }
+        function resizehandler() {
+            console.log('sdfds');
+        }
+        window.onresize = debounce(resizehandler, 500);
+
+
+
+        /**函数节流**/ 
+        //  一个输入框要求输入联想，在用户输入的过程中，需要按照一定的时间像后台发送ajax请求，规定时间发送请求
+        function throttle(method, duration) {
+            var begin = new Date();
+            return function () {
+                var context = this, args = arguments, current = new Date();
+                //达到时间间隔
+                if (current - begin >= duration) {
+                    method.apply(context, args);
+                    begin = current;
+                }
+            }
+        }
+        function resizehandler() {
+            console.log('sadffds');
+        }
+        window.onresize = throttle(resizehandler, 500);
+
+
+
+        //红皮书上面的函数防抖
+         function throttle(method) {
+            clearTimeout(method.tId);
+            method.tId = setTimeout(function(){
+                method.call(null)
+            },500)
+         }
+
+         function bind(fn) {
+             var outer = Array.prototype.slice.call(arguments,1);
+             return function(){
+                 fn.apply(null,outer)
+             }
+         }
+
+
+
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click',bind(throttle,resizehandler),false)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            img {
+                display: block;
+                margin-bottom: 50px;
+                width: 400px;
+                height: 400px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+        <img src="default.jpg" data-src="https://suneee.sunmath.cn/nns:80download3?fileName=1554341181633_aW1hZ2U=.png"
+            alt="">
+
+    </body>
+
+
+
+    <script>
+
+        // function LazyLoad(el, options) {
+        //     if (!(this instanceof LazyLoad)) {
+        //         return new LazyLoad(el)
+        //     }
+        //     this.setting = Object.assign({}, { src: 'data-src', srcset: 'data-srcset', selector: '.lazyload' }, options)
+        //     if (typeof el === 'string') {
+        //         el = document.querySelectorAll(el)
+        //     }
+        //     this.images = Array.from(el)
+
+        //     this.listener = this.loadImage()
+        //     this.listener()
+        //     this.initEvent()
+        // }
+
+        // LazyLoad.prototype = {
+        //     loadImage() {
+        //         return throttle(function () {
+        //             let startIndex = 0
+        //             while (startIndex < this.images.length) {
+        //                 const image = this.images[startIndex]
+        //                 if (isElementInViewport(image)) {
+        //                     const src = image.getAttribute(this.setting.src)
+        //                     const srcset = image.getAttribute(this.setting.srcset)
+        //                     if (image.tagName.toLowerCase() === 'img') {
+        //                         if (src) {
+        //                             image.src = src
+        //                         }
+        //                         if (srcset) {
+        //                             image.srcset = srcset
+        //                         }
+        //                     } else {
+        //                         image.style.backgroundImage = `url(${src})`
+        //                     }
+        //                     this.images.splice(startIndex, 1)
+        //                     continue
+        //                 }
+        //                 startIndex++
+        //             }
+
+        //             if (!this.images.length) {
+        //                 this.destroy()
+        //             }
+        //         }).bind(this)
+        //     },
+        //     initEvent() {
+        //         window.addEventListener('scroll', this.listener, false)
+        //     },
+        //     destroy() {
+        //         window.removeEventListener('scroll', this.listener, false)
+        //         this.images = null
+        //         this.listener = null
+        //     }
+        // }
+
+        // function throttle (fn, interval = 500) {
+        //     let timer = null
+        //     let firstTime = true
+        //     return function (...args) {
+        //         if (firstTime) {
+        //             fn.apply(this, args)
+        //             return firstTime = false
+        //         }
+
+        //         if (timer) {
+        //             // 定时器正在执行中，跳过
+        //             return
+        //         }
+        //         timer = setTimeout(() => {
+        //             clearTimeout(timer)
+        //             timer = null
+        //             fn.apply(this, args)
+        //         }, interval)
+
+        //     }
+        // }
+
+        // function isElementInViewport (el)   {
+        //     const { top, height, left, width } = el.getBoundingClientRect();
+        //     const w = window.innerWidth || document.documentElement.clientWidth
+        //     const h = window.innerHeight || document.documentElement.clientHeight
+        //     return (
+        //         top <= h &&
+        //         (top + height) >= 0 &&
+        //         left <= w &&
+        //         (left + width) >= 0
+        //     )
+        // }
+
+        // LazyLoad('img')
+
+
+
+
+
+
+
+        // function LazyLoad(images, options = {}) {
+        //     if (!(this instanceof LazyLoad)) {
+        //         return new LazyLoad(images, options)
+        //     }
+        //     this.setting = Object.assign({}, { src: 'data-src', srcset: 'data-srcset', selector: '.lazyload' }, options)
+        //     this.images = images || document.querySelectorAll(this.setting.selector)
+        //     this.observer = null
+        //     this.init()
+        // }
+
+        // LazyLoad.prototype.init = function () {
+        //     let self = this
+        //     let observerConfig = {
+        //         root: null,
+        //         rootMargin: '0px',
+        //         threshold: [0]
+        //     }
+        //     this.observer = new IntersectionObserver(entries => {
+        //         console.log(entries)
+        //         entries.forEach(entry => {
+        //             const target = entry.target
+        //             console.log(target)
+        //             if (entry.intersectionRatio > 0) {
+        //                 this.observer.unobserve(target)
+        //                 const src = target.getAttribute(this.setting.src)
+        //                 const srcset = target.getAttribute(this.setting.srcset)
+        //                 if ('img' === target.tagName.toLowerCase()) {
+        //                     if (src) {
+        //                         target.src = src
+        //                     }
+        //                     if (srcset) {
+        //                         target.srcset = srcset
+        //                     }
+        //                 } else {
+        //                     target.style.backgroundImage = `url(${src})`
+        //                 }
+        //             }
+        //         })
+        //     }, observerConfig)
+
+        //     this.images.forEach(image => this.observer.observe(image))
+        // }
+
+
+
+        // LazyLoad(document.querySelectorAll('img'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
